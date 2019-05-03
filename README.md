@@ -1,10 +1,12 @@
 
 # Gfif Docker Repository for SARAH
 
-# Installing Docker in Debian/Ubuntu
+# Installing Docker in Debian
 ```.sh
-curl -fsSL https://get.docker.com -o get-docker.sh
-sudo sh get-docker.sh
+echo "deb-src http://security.debian.org/debian-security stretch/updates main contrib" >> /etc/apt/sources.list
+echo "deb [arch=amd64] https://download.docker.com/linux/debian stretch stable" >>  /etc/apt/sources.list
+apt update
+apt install docker-ce
 ```
 
 If you would like to use Docker as a non-root user, you should now consider adding your user to the “docker” group with something like:
