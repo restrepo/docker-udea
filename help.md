@@ -3,7 +3,7 @@
 ```
 docker image ls
 ```
-* Running container
+* Running containers
 ```
 docker container ls
 ```
