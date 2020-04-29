@@ -18,5 +18,10 @@ docker stop CONTAINER_ID
 docker image rm -f IMAGE_ID
 ```
 
+## Remove container
+```
+docker container rm -f CONTAINER_ID
+```
+
 
 
