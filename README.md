@@ -17,13 +17,35 @@ docker run -p 8000:8000 gfif/sarah:sarah jupyterhub-start
 In the browser point to http://localhost:8000, and login into the Jupyter server with
 * Username: sarah 
 * Password: sarah
-Then 
+
+The Jupyter file browser should display something like
 
 ![img](https://raw.githubusercontent.com/restrepo/docker-udea/master/hub.png)
 
+Go to the `BSM-Submodules` directory and open the `index.ipynb` notebook. See the documentation of https://github.com/restrepo/BSM-Submodules for details.
 
+## Stop the container use
+List the containers to check for the `CONTAINER ID`
+```bash
+docker container ls
+```
+and stop it
+```bash
+docker stop CONTAINER_ID
+```
+### Remove the image
+List the images to check for the `IMAGE ID`
+```bash
+docker image ls
+```
+and remove it
+```bash
+docker image rm -f IMAGE_ID
+```
 
-## Installing Docker in Debian
+## Build the image and upload to Docker Hub
+
+### Installing Docker in Debian
 See: https://docs.docker.com/engine/install/debian/
 ```bash
 # apt-get update
@@ -52,27 +74,22 @@ If you would like to use Docker as a non-root user, you should now consider addi
 sudo usermod -aG docker your-user
 ```
 
-## Building and Image from Dockerfile
+### Building and Image from Dockerfile
 ```.sh
 docker build --tag=sarah .
 ```
 
-## To test image create 
+### To test image create 
 ```.sh
 docker run -it sarah bash
 ```
 
-## Running Docker Loaded
+### Running Docker Loaded
 ```.sh
 docker run -p 8000:8000 sarah jupyterhub-start
 ```
 
-## Running Docker From Hub
-```.sh
-docker run -p 8000:8000 -d --name sarah gfif/sarah jupyterhub-start
-```
-
-## Uploading Docker
+### Uploading to Docker Hub
 
 ```.sh
 docker login
@@ -85,3 +102,6 @@ docker tag 45c7f5f5654e gfif/sarah:sarah
 
 docker push gfif/sarah:sarah
 ```
+
+### Download and run from Docker Hub
+See first section 
