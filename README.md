@@ -17,6 +17,8 @@ docker run -p 8000:8000 gfif/sarah:sarah jupyterhub-start
 In the browser point to http://localhost:8000, and login into the Jupyter server with
 * Username: sarah 
 * Password: sarah
+Then 
+[!img](https://raw.githubusercontent.com/restrepo/docker-udea/master/hub.png)
 
 
 
