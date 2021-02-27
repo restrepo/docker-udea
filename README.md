@@ -2,18 +2,23 @@
 # Gfif Docker Repository for SARAH
 
 ## USAGE
-Download image from Docker Hub:
-``bash
+Download image from Docker Hub at https://hub.docker.com/r/gfif/sarah/tags
+```bash
 $ docker pull gfif/sarah:sarah
 #Check downloaded image
 $ docker image ls
 REPOSITORY   TAG       IMAGE ID       CREATED         SIZE
 gfif/sarah   sarah     bca5612b83ad   22 months ago   1.73GB
-``
-## To test image, use 
-```bash
-docker run -it gfif/sarah:sarah bash
 ```
+### To run the image, use
+```bash
+docker run -p 8000:8000 gfif/sarah:sarah jupyterhub-start
+```
+In the browser point to http://localhost:8000, and login into the Jupyter server with
+* Username: sarah 
+* Password: sarah
+
+
 
 ## Installing Docker in Debian
 See: https://docs.docker.com/engine/install/debian/
