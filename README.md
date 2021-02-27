@@ -40,7 +40,7 @@ docker build --tag=sarah .
 docker run -it sarah bash
 ```
 
-# Runnung Docuker Loaded
+# Running Docker Loaded
 ```.sh
 docker run -p 8000:8000 sarah jupyterhub-start
 ```
