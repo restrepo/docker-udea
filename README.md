@@ -2,7 +2,18 @@
 # Gfif Docker Repository for SARAH
 
 ## USAGE
-Download image from Docker Hub at https://hub.docker.com/r/gfif/sarah/tags
+### Installing Docker in Debian
+See: https://docs.docker.com/engine/install/debian/
+
+If you would like to use Docker as a non-root user, you should now consider adding your user to the “docker” group with something like:
+```
+sudo groupadd docker
+sudo usermod -aG docker your-user
+newgrp docker
+```
+
+### Download image from Docker Hub
+Locatet at https://hub.docker.com/r/gfif/sarah/tags
 ```bash
 $ docker pull gfif/sarah:sarah
 #Check downloaded image
@@ -24,7 +35,7 @@ The Jupyter file browser should display something like
 
 Go to the `BSM-Submodules` directory and open the `index.ipynb` notebook. See the documentation of https://github.com/restrepo/BSM-Submodules for details.
 
-## Stop the container use
+## To stop the container use
 List the containers to check for the `CONTAINER ID`
 ```bash
 docker container ls
@@ -33,7 +44,7 @@ and stop it
 ```bash
 docker stop CONTAINER_ID
 ```
-### Remove the image
+### To remove the image
 List the images to check for the `IMAGE ID`
 ```bash
 docker image ls
@@ -44,35 +55,6 @@ docker image rm -f IMAGE_ID
 ```
 
 ## Build the image and upload to Docker Hub
-
-### Installing Docker in Debian
-See: https://docs.docker.com/engine/install/debian/
-```bash
-# apt-get update
-
-# apt-get install \
-    apt-transport-https \
-    ca-certificates \
-    curl \
-    gnupg-agent \
-    software-properties-common
-# curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -        
-# add-apt-repository \
-   "deb [arch=amd64] https://download.docker.com/linux/debian \
-   $(lsb_release -cs) \
-   stable"
-# apt update
-# apt install docker-ce
-
-#OPTIONAL: install compose: https://docs.docker.com/compose/install/
-# curl -L "https://github.com/docker/compose/releases/download/1.25.5/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-# chmod +x /usr/local/bin/docker-compose
-```
-
-If you would like to use Docker as a non-root user, you should now consider adding your user to the “docker” group with something like:
-```
-sudo usermod -aG docker your-user
-```
 
 ### Building and Image from Dockerfile
 ```.sh
