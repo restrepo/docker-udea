@@ -104,4 +104,4 @@ docker push gfif/sarah:sarah
 ```
 
 ### Download and run from Docker Hub
-See __[USAGE]__(https://github.com/restrepo/docker-udea/blob/master/README.md#usage) section 
+See __[USAGE](https://github.com/restrepo/docker-udea/blob/master/README.md#usage)__ section 
