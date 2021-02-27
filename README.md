@@ -18,7 +18,8 @@ In the browser point to http://localhost:8000, and login into the Jupyter server
 * Username: sarah 
 * Password: sarah
 Then 
-[!img](https://raw.githubusercontent.com/restrepo/docker-udea/master/hub.png)
+
+![img](https://raw.githubusercontent.com/restrepo/docker-udea/master/hub.png)
 
 
 
