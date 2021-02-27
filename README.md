@@ -21,7 +21,8 @@ $ docker image ls
 REPOSITORY   TAG       IMAGE ID       CREATED         SIZE
 gfif/sarah   sarah     bca5612b83ad   22 months ago   1.73GB
 ```
-### To run the image, use
+### To run the image
+Be sure to not have any other jupyter notebook server running around, then use
 ```bash
 docker run -p 8000:8000 gfif/sarah:sarah jupyterhub-start
 ```
