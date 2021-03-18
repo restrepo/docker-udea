@@ -13,7 +13,7 @@ newgrp docker
 ```
 
 ### Download image from Docker Hub
-Locatet at https://hub.docker.com/r/gfif/sarah/tags
+Located at https://hub.docker.com/r/gfif/sarah/tags
 ```bash
 $ docker pull gfif/sarah:sarah
 #Check downloaded image
